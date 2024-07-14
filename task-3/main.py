@@ -23,8 +23,6 @@ def print_directory_structure(directory, prefix=""):
         print(Fore.RED + f"Помилка: {e}")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print(Fore.RED + "Використання: cd /Users/mac/Desktop/IT_Developer/FULL\ STACK\ DEV/GitHub/goit-pycore-hw-04/task-3")
-    else:
-        directory_path = sys.argv[1]
-        print_directory_structure(directory_path)
+     pictures_directory = Path(__file__).resolve().parent / "pictures"
+     print_directory_structure(pictures_directory)
+   
